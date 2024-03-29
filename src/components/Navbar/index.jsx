@@ -2,10 +2,10 @@ import React from 'react'
 import { Container, Section, Wrapper, Logo, Link } from '../Navbar/style'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { navbar } from '../../utils/navbar'
+import Button from '../Generic/Button'
 
 
 const Home = () => {
-
   const navigate = useNavigate()
   return (
     <Container>
@@ -15,15 +15,15 @@ const Home = () => {
         </Section>
         <Section>
           {
-            navbar.map(({ title, path }, index) => {
-              return (
+            navbar.map(({ title, path, hidden }, index) => {
+              return !hidden && (
                 <Link className={({ isActive }) => isActive && 'active'} key={index} to={path}>{title}</Link>
               )
             })
           }
         </Section>
         <Section>
-          <button>Sign in</button>
+          <Button onClick={() => navigate('/signin')} type='dark'>Sign in</Button>
         </Section>
       </Wrapper>
       <Outlet />

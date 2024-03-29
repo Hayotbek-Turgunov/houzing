@@ -1,10 +1,12 @@
 import React from 'react'
 import { Container } from './style'
+import Input from '../Generic/Input'
 
 export const Home = () => {
   return (
     <Container>
-      Home
+      <h1>Home</h1>
+      <Input placeholder={'test'} />
     </Container>
   )
 }
