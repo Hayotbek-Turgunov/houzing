@@ -7,7 +7,7 @@ const getType = ({ type }) => {
     case 'dark':
       return { background: 'transparent', border: '1px solid white', color: 'white' };
     case 'light':
-      return { background: 'transparent', border: '1px solid #E6E9EC', color: 'white' };
+      return { background: 'transparent', border: '1px solid #E6E9EC', color: '#0D263B' };
     case 'primary':
       return { background: '#0061DF', border: 'none', color: 'white' };
     default:
